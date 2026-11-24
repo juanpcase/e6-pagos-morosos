@@ -6,7 +6,7 @@ Equipo E__ · Análisis de Datos Intermedio · Estud-IA (Capa 2)
 
 | Campo | Respuesta |
 |---|---|
-| Usuario y decisión | |
+| Usuario y decisión | **Usuarios:** Equipos de Riesgo de Crédito y Cartera (analistas o líderes de riesgo en entidades financieras o áreas de inteligencia de negocios) que monitorean cómo se distribuyen los clientes entre calificaciones A y E frente al resto del mercado; y Áreas de Estrategia, Producto o Banca (responsables de seguimiento competitivo) que contrastan el perfil de cartera de su entidad frente a pares del sector.<br>**Decisión:** Apoya el *benchmarking* o posicionamiento relativo para identificar qué entidades concentran mayor volumen o proporción de clientes en cada calificación (A a E) y cómo se ubica una entidad frente a las demás en un corte mensual. |
 | Pregunta | ¿Qué entidad financiera presenta la mayor cantidad de clientes en cada categoría de calificación de riesgo (A a E) y cómo se comporta esta distribución frente a las demás entidades? |
 | Fuente con API | https://www.datos.gov.co/resource/rvii-eis8.json |
 | Qué representa una fila | El saldo mensual de cartera de un producto de crédito en una entidad financiera, con su altura de mora y su distribución por calificación de riesgo (número de clientes y saldo en A, B, C, D y E). |

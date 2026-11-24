@@ -13,7 +13,7 @@ Equipo E__ · Análisis de Datos Intermedio · Estud-IA (Capa 2)
 | Campo que la identifica | `fecha_corte` + `tipo_entidad` + `codigo_entidad` + `unicap` + `renglon` |
 | Cada cuánto se actualiza | Mensualmente |
 | Dato a confirmar | Transformar los datos a su tipo correspondiente (la API entrega los números como texto). Confirmar que la combinación de campos que identifica la fila no se repite, y si la columna `renglon` incluye filas de subtotal. |
-| Tres indicadores | 1. Cantidad de clientes por calificación de riesgo (A a E) en cada entidad. · 2. Participación de cada calificación dentro del total de clientes calificados de la entidad (%). · 3. Saldo de cartera por calificación de riesgo y participación de la cartera riesgosa (B a E) en el saldo total. |
+| Tres indicadores | 1. Cantidad de clientes por calificación de riesgo (A a E) en cada entidad. · 2. Participación de cada calificación dentro del total de clientes calificados de la entidad (%). · 3. de cartera por calificación de riesgo y participación de la cartera riesgosa (B a E) en el saldo total. |Saldo 
 | Terminó bien si… | Hay una tabla con el número y el porcentaje de clientes en cada calificación (A a E) para cada entidad y mes, y los totales cuadran con la fuente (sin filas duplicadas). |
 | No vamos a construir | No vamos a identificar qué factores influyen en la calificación de riesgo de los bancos. |
 

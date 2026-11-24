@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """Trae TODAS las filas de una API de datos.gov.co, página por página,
 comprueba que no falte ninguna y guarda el bruto con fecha.

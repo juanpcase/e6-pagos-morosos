@@ -6,14 +6,14 @@ Equipo E__ · Análisis de Datos Intermedio · Estud-IA (Capa 2)
 
 | Campo | Respuesta |
 |---|---|
-| Usuario y decisión | |
+| Usuario y decisión | **Usuarios:** Equipos de Riesgo de Crédito y Cartera (analistas o líderes de riesgo en entidades financieras o áreas de inteligencia de negocios) que monitorean cómo se distribuyen los clientes entre calificaciones A y E frente al resto del mercado; y Áreas de Estrategia, Producto o Banca (responsables de seguimiento competitivo) que contrastan el perfil de cartera de su entidad frente a pares del sector.<br>**Decisión:** Apoya el *benchmarking* o posicionamiento relativo para identificar qué entidades concentran mayor volumen o proporción de clientes en cada calificación (A a E) y cómo se ubica una entidad frente a las demás en un corte mensual. |
 | Pregunta | ¿Qué entidad financiera presenta la mayor cantidad de clientes en cada categoría de calificación de riesgo (A a E) y cómo se comporta esta distribución frente a las demás entidades? |
 | Fuente con API | https://www.datos.gov.co/resource/rvii-eis8.json |
 | Qué representa una fila | El saldo mensual de cartera de un producto de crédito en una entidad financiera, con su altura de mora y su distribución por calificación de riesgo (número de clientes y saldo en A, B, C, D y E). |
 | Campo que la identifica | `fecha_corte` + `tipo_entidad` + `codigo_entidad` + `unicap` + `renglon` |
 | Cada cuánto se actualiza | Mensualmente |
 | Dato a confirmar | Transformar los datos a su tipo correspondiente (la API entrega los números como texto). Confirmar que la combinación de campos que identifica la fila no se repite, y si la columna `renglon` incluye filas de subtotal. |
-| Tres indicadores | 1. Cantidad de clientes por calificación de riesgo (A a E) en cada entidad. · 2. Participación de cada calificación dentro del total de clientes calificados de la entidad (%). · 3. Saldo de cartera por calificación de riesgo y participación de la cartera riesgosa (B a E) en el saldo total. |
+| Tres indicadores | 1. Cantidad de clientes por calificación de riesgo (A a E) en cada entidad. · 2. Participación de cada calificación dentro del total de clientes calificados de la entidad (%). · 3. de cartera por calificación de riesgo y participación de la cartera riesgosa (B a E) en el saldo total. |Saldo 
 | Terminó bien si… | Hay una tabla con el número y el porcentaje de clientes en cada calificación (A a E) para cada entidad y mes, y los totales cuadran con la fuente (sin filas duplicadas). |
 | No vamos a construir | No vamos a identificar qué factores influyen en la calificación de riesgo de los bancos. |
 
@@ -32,6 +32,7 @@ Equipo E__ · Análisis de Datos Intermedio · Estud-IA (Capa 2)
 | 2026-11-17 | Enfocar el proyecto en comparar la distribución de clientes por calificación de riesgo entre entidades, no en predecir ni en explicar las causas de la mora. | Los datos son agregados por entidad y producto; no hay datos de personas para estudiar perfiles ni causas. |
 | 2026-11-17 | Usar el endpoint sin `?$limit=5`. | Con ese parámetro la API devuelve solo 5 filas. |
 | 2026-11-17 | Medir los clientes por calificación (A a E), no "clientes morosos por calificación". | El dataset trae el número de clientes en cada calificación y, aparte, el total de clientes con mora mayor a 30 días; no cruza ambos datos. |
+| 2026-11-24 | Filtrar los datos de la API a partir de 2020 (`fecha_corte` desde 2020). | Reduce el volumen de filas descargadas y procesadas frente a traer todo el histórico desde 2015, agilizando la limpieza y el análisis, mientras conserva una ventana amplia y reciente para comparar entidades. |
 
 ## Reglas del repositorio
 
